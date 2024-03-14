@@ -19,15 +19,20 @@
         <button class="submit-button" type="submit">Login</button>
       </form>
     </div>
+    <div class="signout">
+      <SignoutComponent />
+    </div>
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import SignoutComponent from './SignoutComponent.vue';
 
 export default {
   name: "LoginForm",
    components: {
+    SignoutComponent,
    },
   data() {
     return {
