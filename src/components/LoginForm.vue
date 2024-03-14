@@ -27,11 +27,14 @@ import axios from "axios";
 
 export default {
   name: "LoginForm",
+   components: {
+   },
   data() {
     return {
       errors: [],
     };
   },
+
   methods: {
     handleSubmit(event) {
       this.errors = [];
