@@ -19,8 +19,8 @@
         <button class="submit-button" type="submit">Login</button>
       </form>
     </div>
-    <div class="signout">
-      <SignoutComponent />
+    <div class="signout" v-if="jwt">
+      <SignoutComponent @signout="handleSignout" />
     </div>
   </div>
 </template>
@@ -37,7 +37,12 @@ export default {
   data() {
     return {
       errors: [],
+      jwt: null,    
     };
+  },
+
+created() {
+    this.jwt = localStorage.getItem('jwt');
   },
 
   methods: {
